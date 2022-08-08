@@ -14,5 +14,5 @@ for (int i = 1; i <= number; i++){
 }
 }
 else {
-    Console.WriteLine("Ввеено не верное число");
+    Console.WriteLine("Введено не верное число");
 }
