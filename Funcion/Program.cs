@@ -1,20 +1,40 @@
-﻿int a1 = 32;
-int b1 = 22;
-int c1 = 54;
-int a2 = 44;
-int b2 = 66;
-int c2 = 21;
-int a3 = 11;
-int b3 = 23;
-int c3 = 33;
-int max = a1;
-if (b1 > max) max = b1;
-if (c1 > max) max = c1;
-if (a2 > max) max = a2;
-if (b2 > max) max = b2;
-if (c2 > max) max = c2;
-if (a3 > max) max = a3;
-if (b3 > max) max = b3;
-if (c3 > max) max = c3;
+﻿void FillArray(int[] collection){ // метод для заполнения массива случайными числами
+    int length = collection.Length; // определяем длину входного массива и записываем в переменую
+    int index = 0; // счетчик
+    while (index<length){
+        collection[index] = new Random().Next(1,9); // генератор случайных целых чисел, с диапозоном
+        index++;
+    }
+}
 
-Console.WriteLine(max);
+void PrintArray(int[] col){ // метод вывода всех чисел массива в качестве аргумента используется созданый массив
+    int count =col.Length; // получение длины массива и запись в переменную
+    int position = 0;  
+    while (position < count){
+        Console.Write(col[position]); // печать каждого значения элемента массива
+        position++; 
+    }
+}
+
+int IndexOf(int[] collection, int find){ // поиск элемента массива, первый аргумент массив, второй аргумент число которое необходимо найти
+    int count = collection.Length; // запись длины входного массива в переменную
+    int index = 0;
+    int position = -1; //ставиться значение -1 для того, если искомого эленета нет то выводил "-1" а не 0(так как 0 это и есть элемент массива)
+    while (index < count){
+        if (collection[index] == find){
+            position = index; // найденая позиия
+            break;// первая найденая позиция заканчивает цикл
+        }
+        index++;    
+    }
+    return position;    // возвращает найденый индекс
+}
+
+
+int[] array = new int[12];  //создание массива(все элементы будут равны 0
+FillArray(array); //заполение созданого массива случайными числами. в качестве аргумента передаем имя массива
+PrintArray(array);// вывод всех чисел массива 
+Console.WriteLine ();
+int pos = IndexOf(array,4); // передаем в переменую результат поиска элемента.первый агрумент имя массива, 
+                            // второй элемент число которое надо найти
+Console.WriteLine(pos);
