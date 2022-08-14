@@ -9,8 +9,11 @@ int number = int.Parse(numberStr!);
 if (number > 0){
     for (int i = 1; i <= number; i++){
         double result = Math.Pow(i, 3);
-        Console.Write(result + ", " + " ");
-        
+        Console.Write(result);
+        if (i != number) {
+            Console.Write(", ");
+        }
     }
+    Console.WriteLine();
 }
 else Console.WriteLine("Введите положительно число!");
