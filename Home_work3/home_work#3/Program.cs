@@ -10,9 +10,9 @@ if (number > 0){
     for (int i = 1; i <= number; i++){
         double result = Math.Pow(i, 3);
         Console.Write(result);
-        if (i != number) {
+            if (i != number) {
             Console.Write(", ");
-        }
+            }
     }
     Console.WriteLine();
 }

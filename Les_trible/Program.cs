@@ -21,15 +21,15 @@ while(count<10000)
 {
     int what = new Random().Next(0,3);
     if (what ==0){
-        x=(x+Xa)/2;
-        y=(y+Ya)/2;
+        x=(x + Xa)/2;
+        y=(y + Ya)/2;
     }
     if (what == 1)
     {   
-        x = (x+Xb)/2;
-        y = (y+Yb)/2;
+        x = (x + Xb)/2;
+        y = (y + Yb)/2;
     }
-    if (what == 3)
+    if (what == 2)
     {
         x = (x + Xc)/2;
         y = (y + Yc)/2;

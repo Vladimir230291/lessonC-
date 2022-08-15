@@ -10,7 +10,7 @@ char[] numberRevers = numberStr!.ToArray();
 
 Array.Reverse(numberRevers);
 
-if (numberStr == new string( numberRevers ))
+if (numberStr == new string(numberRevers))
     Console.WriteLine($"{numberStr} -> да");
 else 
     Console.WriteLine($"{numberStr} -> нет");
